@@ -1,7 +1,12 @@
 const path = require('path');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
-const sharp = require('sharp');
+let sharp = null;
+try {
+    sharp = require('sharp');
+} catch (e) {
+    console.warn('Optional native image library sharp not available, using raw buffer mode.');
+}
 
 const STORAGE_ROOT = path.join(__dirname, '..', 'storage', 'ZAYANI');
 

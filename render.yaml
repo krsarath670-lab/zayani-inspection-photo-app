@@ -3,7 +3,7 @@ services:
     name: zayani-inspection-app
     env: node
     plan: free
-    buildCommand: npm --prefix client install && npm --prefix client run build
+    buildCommand: npm install && cd client && npm install && npm run build
     startCommand: node index.js
     envVars:
       - key: NODE_ENV

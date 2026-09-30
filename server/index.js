@@ -9,6 +9,7 @@ const buildingRoutes = require('./routes/buildingRoutes');
 const photoRoutes = require('./routes/photoRoutes');
 const searchRoutes = require('./routes/searchRoutes');
 
+const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Initialize Database & Seed

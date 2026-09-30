@@ -2,13 +2,16 @@
   "name": "zayani-maintenance-app",
   "version": "1.0.0",
   "description": "ZAYANI Maintenance Reporting Application",
-  "main": "server/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "node index.js",
     "build": "npm --prefix client install --include=dev && npm --prefix client run build",
     "dev:server": "node server/index.js",
     "dev:client": "npm run dev --prefix client",
     "test": "node run_acceptance_test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "keywords": [
     "zayani",
